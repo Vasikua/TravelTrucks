@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import  Layout  from './components/Layout/Layout';
-import Loader from "./components/Loader/Loader";
+import  {Layout}  from "./components/Layout/Layout";
+import {Loader }from "./components/Loader/Loader";
 
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -10,10 +10,10 @@ const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 export default function App() {
+  const dispatch = useDispatch();
   
 
-    return (<> {  isRefreshing ? (<p> Wait your data is refreshing...</p >) : 
-      (
+    return (<> 
         <Layout>
           <Suspense fallback={<Loader />}>
             <Routes>
@@ -23,6 +23,6 @@ export default function App() {
             </Routes>
           </Suspense>
         </Layout>
-      )}
+      
   </>)
 };

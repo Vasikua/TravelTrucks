@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { changeFilter } from '../../redux/filter/slice';
 import { selectNameFilter } from '../../redux/filter/selectors';
 
-export default function Filters() {
+export const Filters = ()=> {
     const dispatch = useDispatch();
       const filter = useSelector(selectNameFilter);
     const handleSearch = (e) => {

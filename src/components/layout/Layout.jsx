@@ -2,7 +2,7 @@ import css from "./Layout.module.css";
 import AppBar from "../appBar/AppBar"
 import { Toaster } from "react-hot-toast";
 
-export default function Layout ({ children }) {
+export const Layout = ({ children })=> {
     return (
         <div className={css.container}>
             <AppBar />

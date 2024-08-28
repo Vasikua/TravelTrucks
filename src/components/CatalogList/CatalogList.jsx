@@ -1,3 +1,3 @@
-export default function CatalogList() { 
-    
+export const  CatalogList = ()=> { 
+
 }
