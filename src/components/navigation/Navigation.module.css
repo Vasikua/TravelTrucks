@@ -1,0 +1,12 @@
+.link {
+  text-decoration: none;
+  padding: 8px;
+  display: inline-flex;
+}
+.link:hover {
+  color: #fff;
+  background-color: rgb(10, 5, 82);
+}
+.getNavLink {
+  padding: 10px;
+}
