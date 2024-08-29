@@ -10,7 +10,7 @@ const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 
 export default function App() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   
 
     return (<> 
