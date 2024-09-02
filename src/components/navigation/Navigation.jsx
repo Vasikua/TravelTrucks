@@ -1,25 +1,30 @@
-import { clsx } from "clsx";
 import css from "./Navigation.module.css";
+import { clsx } from "clsx";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux" ;
-import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
-export default function Navigation() {
+export const Navigation = () =>{
     const getNavLink = ({ isActive }) => {
         return clsx(css.link, isActive && css.active)
     };
-    const isLoggedIn = useSelector(selectIsLoggedIn);
-    return (
+   
+    return (<>
+       
+      
         <nav className={css.navigation}>
+            <p className={css.logo}>
+        <span role="img" aria-label="TravelTrucks">
+                    <img srcSet="../../images/temp/Logo.svg"
+                        src="../../images/temp/Logo.png" alt="TravelTrucks" />
+        </span>
+            </p>
+            <div className={css.navigationMenu}></div>
             <NavLink className={getNavLink} to="/">
                 Home
             </NavLink>
-            {isLoggedIn &&(
-                <NavLink className={getNavLink} to="/catalog">
+            <NavLink className={getNavLink} to="/catalog">
                 Catalog
-                </NavLink>)}
-            
-        </nav>
+            </NavLink>
+            </nav>
+            </>
     )
 }
-

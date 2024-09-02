@@ -13,7 +13,7 @@ const handleRejected = (state, action) => {
 }
 
 const campersSlice = createSlice({
-  name:"contacts",
+  name:"campers",
   initialState: {
     items: [],
     isLoading: false,

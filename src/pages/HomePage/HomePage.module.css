@@ -1,4 +1,41 @@
+body {
+  width: 1440px;
+  height: 696px;
+  background: url("../../images/temp/Picture.png") no-repeat;
+  background-size: cover;
+}
+
+.mainContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  width: 571px;
+  height: 176px;
+  margin-left: 64px;
+  margin-top: 264px;
+}
+.textContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  height: 80px;
+}
+
 .title {
-  position: absolute;
-  top: 10px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.66667;
+  font-family: "Inter", sans-serif;
+  color: #f7f7f7;
+}
+.text {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: "Inter", sans-serif;
+  color: #f7f7f7;
 }

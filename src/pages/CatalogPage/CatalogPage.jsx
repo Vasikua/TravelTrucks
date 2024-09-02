@@ -6,10 +6,9 @@ export default function CatalogPage() {
     return (<div className={css.wrapper}>
          
         <h2 className={css.title}>Catalog Page </h2>
-        <div className={css.wrapperForm}>
+       
             
             <Filters />
-            </div>
             <CatalogList />
         </div>
     )

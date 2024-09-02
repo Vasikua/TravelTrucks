@@ -1,0 +1,23 @@
+.ShowMoreBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 166px;
+  height: 56px;
+  background: #e44848;
+}
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.ShowMoreBtn:hover {
+  background: #d84343;
+}
