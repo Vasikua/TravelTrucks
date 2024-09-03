@@ -1,15 +1,35 @@
 import css from "./Camper.module.css";
 
-export const Camper = ({ camper: { name, gallery} }) => {
-     const titleImage = gallery?.[0]?.original || '';
+export const Camper = ({ camper: { name, gallery, description, price, rating, location} }) => {
+      
+    const titleImage = gallery?.[0]?.original || '';
+    const textLength = description.length>62? description.slice(0,62)+"..." :description;
+    const priceCar = price.toFixed(2);
     return <>
+       
         <div className={css.camperComtainer}>
             <div className={css.camperPoster}>
-
- {titleImage ? <img src={titleImage} alt={`${name} camper`} /> : 'No image available'}
+                {titleImage ? <img className={css.poster} src={titleImage} alt={`${name} camper`} /> : 'No image available'}
             </div>
             <div className={css.camperDescription}>
-{name}
+                <div>
+                    <div>{name}</div>
+                    <div> {priceCar}</div>
+                </div>
+                 <div>
+                    <div>
+                        {rating}
+                    </div>
+                    <div>
+                        {location}
+                    </div>
+                 </div>
+                <div>
+                  {textLength}
+                </div>
+                <ul>
+
+                </ul>
             </div>
         </div>
     </>

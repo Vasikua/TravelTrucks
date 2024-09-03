@@ -1,0 +1,20 @@
+.camperComtainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+  width: 840px;
+  height: 320px;
+}
+.camperPoster {
+  width: 292px;
+  height: 320px;
+}
+.poster {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  size: unset;
+  background: rgb(144, 152, 144);
+}

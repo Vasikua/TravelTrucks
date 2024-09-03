@@ -1,18 +1,15 @@
 import css from "./ViewBtn.module.css";
-import { useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom"; 
 export const ViewBtn = () => {
 
-    const navigate = useNavigate();
-    const goToCatalog = () => {
-        navigate('/catalog');
-    }
-    return <>
+        return <>
         <button className={css.viewBtn}
-        onClick={goToCatalog}
+       
         >
             <span className={css.text}>
-                View Now
-            </span>
+                <Link to='/catalog'>View Now
+</Link>            </span>
      </button>
 </>   
 }

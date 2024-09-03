@@ -1,5 +1,6 @@
 import css from './HomePage.module.css'
 import { ViewBtn } from "../../components/Button/ViewBtn/ViewBtn";
+
 export default function HomePage() {
     return <>
         <div className={css.mainContainer}>
