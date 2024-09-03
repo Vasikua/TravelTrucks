@@ -1,7 +1,7 @@
-.label {
-  margin-bottom: 5px;
-  color: black;
-}
-.input {
-  width: 275px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 360px;
+  height: 752px;
 }

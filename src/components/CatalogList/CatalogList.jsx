@@ -3,16 +3,20 @@ import { useEffect } from "react";
 import { getAllCampers } from "../../redux/campers/operations";
 import css from "./CatalogList.module.css";
 import { Camper } from "../Camper/Camper";
+
 // import { selectFilteredCampers } from "../../redux/campers/selectors";
 
 export const CatalogList = () => { 
+    
     const dispatch = useDispatch();
     useEffect(() => {
     dispatch(getAllCampers());
-    }, [dispatch]);
-    const campers = useSelector(state => state.campers.items.items)
-    console.log(campers);
+    },
+        [dispatch]);
+    const campers = useSelector(state => state.campers.items?.items||[])
+   
     return <>
+       
             <ul className={css.camperList}>
                {campers.map((camper) => (
                     <li key={camper.id} className={css.camperItem}>
@@ -20,6 +24,6 @@ export const CatalogList = () => {
                    </li>
                ))}
             </ul>
-            
+       
     </>
 }
