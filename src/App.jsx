@@ -3,7 +3,6 @@ import { lazy, Suspense } from "react";
 import  {Layout}  from "./components/layout/Layout";
 import {Loader }from "./components/Loader/Loader";
 
-
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
 const CamperPage = lazy(()=> import("./pages/CamperPage/CamperPage"))

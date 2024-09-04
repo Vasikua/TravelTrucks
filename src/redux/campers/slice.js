@@ -15,10 +15,26 @@ const handleRejected = (state, action) => {
 const campersSlice = createSlice({
   name:"campers",
   initialState: {
-    items: [],
-    isLoading: false,
-    error: null,
+    campers: [],
+  camper: {
+    name: "",
+    location:"",
+    description:"",
+    gallery: [],
+    reviews: [],
+    rating: 0,
+    price: 0,
+      
   },
+ isLoading: false,
+ error: null,
+ filters: {
+    equipment: [],
+    location: "",
+    type:"",
+   },
+ favourites:[],
+ },
 
   extraReducers: builder => {
     builder
@@ -26,7 +42,7 @@ const campersSlice = createSlice({
       .addCase(getAllCampers.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.error = null;
-                state.items = action.payload; 
+                state.campers = action.payload.items; 
        })
       .addCase(getAllCampers.rejected, handleRejected)
 
@@ -34,8 +50,7 @@ const campersSlice = createSlice({
       .addCase(getCamperById.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.error = null;
-                const index = state.items.findIndex(camper => camper.id === action.payload.id);
-                state.items = state.items.filter((_, idx) => idx == index);
+                state.camper = action.payload;
               })
       .addCase(getCamperById.rejected, handleRejected)
       

@@ -3,29 +3,20 @@ import { createSlice } from '@reduxjs/toolkit';
 export const filterSlice = createSlice({
   name: 'filters',
   initialState: {
-    AC: '',
-    Automatic: '',
-    Kitchen: '',
-    TV: '',
-    Bathroom: '',
-    Van: '',
-    FullyIntegrated: '',
-    Alcove:'',
-
-  },
-  reducers: {
-    changeFilter(state, action) {
-       state.AC=action.payload;
-       state.Automatic=action.payload;
-       state.Kitchen=action.payload;
-       state.TV=action.payload;
-       state.Bathroom=action.payload;
-       state.Van=action.payload;
-       state.FullyIntegrated=action.payload;
-       state.Alcov=action.payload;
-      
+  
+    filters: {
+      equipment: [],
+      location: "",
+      type: "",
     },
-  },
+    reducers: {
+      changeFilter(state, action) {
+        state.quipment = action.payload.equipment;
+        state.location = action.payload.location;
+        state.type = action.payload.type;
+      },
+    },
+  }
 });
 export const { changeFilter } = filterSlice.actions;
 export const filterReducer = filterSlice.reducer;
