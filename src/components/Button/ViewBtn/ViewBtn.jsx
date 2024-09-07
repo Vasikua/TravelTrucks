@@ -8,8 +8,10 @@ export const ViewBtn = () => {
        
         >
             <span className={css.text}>
-                <Link to='/catalog'>View Now
-</Link>            </span>
-     </button>
+                    <Link to='/catalog'>
+                        View Now
+                    </Link>
+            </span>
+        </button>
 </>   
 }
