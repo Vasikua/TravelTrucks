@@ -1,5 +1,5 @@
 import SearchLocation from '../SearchLocation/SearchLocation';
-import VehicleEquipment from '../VehicleEquipment/VehicleEquipment';
+import {VehicleEquipment} from '../VehicleEquipment/VehicleEquipment';
 import VehicleType from '../VahicleType/VahicleType';
 import { SearchBtn } from '../Button/SearchBtn/SearchBtn';
 import css from './Filters.module.css';
